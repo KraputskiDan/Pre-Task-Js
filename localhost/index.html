@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" language="javascript" src="style.js"></script>
+	
+	<title>Pre task</title>
+</head>
+<body>
+	<header>
+		<section>
+			<form action="#" method="post">
+				<h4>Выбор стиля страницы</h4>
+				<div class="wrapper">
+					
+					<label class="rad" for="radio-choice-1" >
+					<input type="radio" name="stylePage" id="radio-choice-1" tabindex="1" value="1" onchange="remakeOpt(this)" checked><i></i>Стиль 1</label>
+
+					<label class="rad" for="radio-choice-2" >
+					<input type="radio" name="stylePage" id="radio-choice-2" tabindex="2" value="2" onchange="remakeOpt(this)"><i></i>Стиль 2</label>
+
+					<label class="rad" for="radio-choice-3" >
+					<input type="radio" name="stylePage" id="radio-choice-3" tabindex="3" value="3" onchange="remakeOpt(this)"><i></i>Стиль 3</label>
+
+				</div>
+			</form>
+		</section>
+	</header>
+	<main>
+		<article>
+			<form id="infoUser" action="mail.php" onsubmit="createPost(event)">
+				<!-- поле для ввода имени!-->
+				<div>
+					<label for="userName">User name:</label>
+					<input 
+						type="text" 
+						name="user" 
+						id="userName" 
+						required 
+						title="Пароль должен содержать только латинские символы" 
+						pattern="[A-Z]{1,1}[a-z]{0,}" 
+						placeholder="Danila" 
+						tabindex="1"/>
+				</div>
+
+				<!-- поле ввода для пароля!-->
+				<div>
+					<label for="userPassword">Password:</label>
+					<input 
+						type="password" 
+						name="password" 
+						id="userPassword" 
+						required
+						title="Пароль должен содержать цифры и латинские буквы и иметь длину от 4 до 8 символов"
+						pattern="[0-9a-fA-F]{4,8}" 	
+						tabindex="1" />
+				</div>
+
+				<!-- поле ввода для почты!-->
+				<div>
+					<label for="userEmail">E-mail:</label>
+					<input 
+						type="email" 
+						name="email" 
+						id="userEmail"
+						required 
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+						title="Ожидались другое значение" 
+						placeholder="xddanila.ru2001@mail.ru" 
+						tabindex="1" />
+				</div>
+				<div>
+					<input type="submit" value="Log In" />
+				</div>
+			</form>
+			<div id = "mail"></div>
+		</article>
+
+	</main>
+	<footer>
+		<p>Danila Khraputski 2021</p>
+	</footer>
+	<script type="text/javascript" language="javascript" src="json.js"></script>
+</body>
+</html>
+
+
+
+
+
