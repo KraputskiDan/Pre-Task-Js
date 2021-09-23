@@ -11,7 +11,7 @@ function createPost(e){
     
         xhr = new XMLHttpRequest(); // инициализируем переменную новым объектом XMLHttpRequest
 
-        xhr.open("POST", "php/mail.php"); // определяем параметры для запроса 
+        xhr.open("POST", "mail.php"); // определяем параметры для запроса 
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // задаем значение заголовка HTTP запроса (указываем, что передаваемое значение на сервер кодируется в кортежах с ключом, разделенных символоми '&', с '=' между ключом и значением)
         xhr.send("x=" + JSON.stringify(account)); // отправляем запрос на сервер
 
